@@ -1,0 +1,39 @@
+@import 'variables';
+
+.theme-light {
+  background-color: $light-bg-primary;
+  color: $light-font-color;
+
+  .lightToggleIcon {
+    fill: $light-icon-color;
+  }
+}
+.theme-dark {
+  background-color: $dark-bg-primary;
+  color: $dark-font-color;
+
+  .darkToggleIcon {
+    fill: $dark-icon-color;
+  }
+}
+
+.theme-changer {
+  padding: 5px;
+  line-height: 0;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover {
+    transition: background-color 0.3s;
+    background-color: rgba(128, 128, 128, 0.212);
+  }
+}

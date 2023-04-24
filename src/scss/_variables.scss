@@ -1,0 +1,15 @@
+@use 'functions' as *;
+
+//Text styles
+$t1: font(17px);
+$h1: font(26px, 800);
+
+//Light theme
+$light-bg-primary: #ffffff;
+$light-font-color: #141c3a;
+$light-icon-color: #141c3a;
+
+//Dark theme
+$dark-bg-primary: #141c3a;
+$dark-font-color: #f9fbfd;
+$dark-icon-color: #f9fbfd;

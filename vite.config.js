@@ -1,6 +1,6 @@
-import autoprefixer from "autoprefixer";
-import { defineConfig } from "vite";
-import { resolve } from "path";
+import autoprefixer from 'autoprefixer';
+import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
   css: {
@@ -10,8 +10,9 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./src"),
-      "@assets": resolve(__dirname, "./src/assets"),
+      '@': resolve(__dirname, './src'),
+      '@assets': resolve(__dirname, './src/assets'),
+      '@styles': resolve(__dirname, './src/scss'),
     },
   },
 });

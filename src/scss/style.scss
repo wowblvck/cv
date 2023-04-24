@@ -1,0 +1,16 @@
+@import 'fonts';
+
+@import 'common';
+//Components Styles
+@import 'components';
+
+//Theme
+@import 'theme';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  transition: all 0.8s;
+}

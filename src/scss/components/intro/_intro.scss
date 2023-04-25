@@ -1,0 +1,37 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.intro {
+  @include theme-style('theme-light') {
+    background-color: $light-bg-second;
+  }
+  @include theme-style('theme-dark') {
+    background-color: $dark-bg-second;
+  }
+  &__container {
+    padding: 153px 0 144px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    font: $h2;
+    span {
+      color: $link-active;
+    }
+  }
+
+  &__description {
+    max-width: 700px;
+    text-align: center;
+    margin: 28px 0 0;
+    font: $t1;
+    line-height: 30px;
+    @include theme-style('theme-light') {
+      color: $light-fc-second;
+    }
+  }
+}

@@ -5,3 +5,9 @@
   margin: 0 auto;
   width: 100%;
 }
+
+@mixin theme-style($name) {
+  .#{$name} & {
+    @content;
+  }
+}

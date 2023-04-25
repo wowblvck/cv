@@ -20,9 +20,9 @@
     transition: transform 0.3s;
 
     &:focus {
-      color: #8428f8;
-      text-shadow: 0.4px 0px 0 #8428f8, -0.4px 0px 0 #8428f8,
-        0px 0.4px 0 #8428f8, 0px -0.4px 0 #8428f8;
+      color: $link-active;
+      text-shadow: 0.4px 0px 0 $link-active, -0.4px 0px 0 $link-active,
+        0px 0.4px 0 $link-active, 0px -0.4px 0 $link-active;
       transform: scale(1.125);
       transition: transform 0.3s;
     }

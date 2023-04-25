@@ -1,0 +1,91 @@
+@use '../../functions' as *;
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.contacts {
+  &__container {
+    padding: 113px 0 132px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__position {
+    margin: 0;
+    text-align: center;
+    font: font(48px, 800);
+    line-height: 59px;
+  }
+
+  &__description {
+    margin: 5px 0 0;
+    text-align: center;
+    font: $t1;
+    @include theme-style('theme-light') {
+      color: $light-fc-second;
+    }
+  }
+
+  &__picture {
+    margin-top: 47px;
+    width: 250px;
+  }
+
+  &__communication {
+    display: grid;
+    margin-top: 26px;
+    grid-template-columns: 1fr auto 1fr;
+  }
+}
+
+.contacts-hr {
+  height: auto;
+  margin: 16px 20px;
+  color: $hr-color;
+  border: none;
+  border-left: 1px solid $hr-color;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &_left {
+    text-align: right;
+  }
+
+  &__title {
+    margin: 0;
+    font: font(20px, 300);
+    line-height: 30px;
+  }
+
+  &__contact {
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    font: font(17px, 300);
+    line-height: 30px;
+    @include theme-style('theme-light') {
+      color: $light-fc-second;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 1px;
+      bottom: -4px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background: $hr-color;
+      transition: 0.5s;
+    }
+  }
+}

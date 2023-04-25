@@ -1,15 +1,19 @@
 @use 'functions' as *;
 
-//Text styles
+//Common styles
 $t1: font(17px);
 $h1: font(26px, 800);
+$hr-color: #dcdcde;
+$link-active: #8428f8;
 
 //Light theme
 $light-bg-primary: #ffffff;
-$light-font-color: #141c3a;
+$light-fc-primary: #141c3a;
+$light-fc-second: #535e88;
 $light-icon-color: #141c3a;
 
 //Dark theme
 $dark-bg-primary: #141c3a;
-$dark-font-color: #f9fbfd;
+$dark-fc-primary: #f9fbfd;
+$dark-fc-second: #f9fbfd;
 $dark-icon-color: #f9fbfd;

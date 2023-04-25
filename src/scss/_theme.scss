@@ -1,18 +1,24 @@
+@use 'mixins' as *;
 @import 'variables';
 
 .theme-light {
   background-color: $light-bg-primary;
-  color: $light-font-color;
+  color: $light-fc-primary;
+}
 
-  .lightToggleIcon {
+.theme-dark {
+  background-color: $dark-bg-primary;
+  color: $dark-fc-primary;
+}
+
+.lightToggleIcon {
+  @include theme-style('theme-light') {
     fill: $light-icon-color;
   }
 }
-.theme-dark {
-  background-color: $dark-bg-primary;
-  color: $dark-font-color;
 
-  .darkToggleIcon {
+.darkToggleIcon {
+  @include theme-style('theme-dark') {
     fill: $dark-icon-color;
   }
 }

@@ -3,17 +3,20 @@
 //Common styles
 $t1: font(17px);
 $h1: font(26px, 800);
+$h2: font(26px, 800);
 $hr-color: #dcdcde;
 $link-active: #8428f8;
 
 //Light theme
 $light-bg-primary: #ffffff;
+$light-bg-second: #f9fbfd;
 $light-fc-primary: #141c3a;
 $light-fc-second: #535e88;
 $light-icon-color: #141c3a;
 
 //Dark theme
 $dark-bg-primary: #141c3a;
+$dark-bg-second: #1d274f;
 $dark-fc-primary: #f9fbfd;
 $dark-fc-second: #f9fbfd;
 $dark-icon-color: #f9fbfd;

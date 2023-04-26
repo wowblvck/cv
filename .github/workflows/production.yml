@@ -1,13 +1,8 @@
 name: Production
 
 on:
-  workflow_dispatch:
-    inputs:
-      parameter:
-        description: Production Runner
-  pull_request:
   push:
-    branches: ['production']
+    branches: ['dev']
 
 jobs:
   build:
@@ -28,3 +23,5 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Copy folder to where nginx expects it to be
+        run: cp -r ${{secrets.COPY_FROM_FOLDER}} ${{secrets.COPY_TO_FOLDER}}

@@ -20,6 +20,9 @@
     padding-bottom: 20px;
     transition: transform 0.3s;
   }
+  @include responsive(sm) {
+    margin: 0;
+  }
 
   &_active {
     transform: translateY(0);

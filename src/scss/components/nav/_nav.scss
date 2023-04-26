@@ -1,7 +1,29 @@
 @use '@styles/variables' as *;
+@use '@styles/mixins' as *;
 
 .nav {
   margin-left: auto;
+  @include responsive(xs) {
+    margin: 0;
+    @include theme-style('theme-light') {
+      background-color: $light-bg-primary;
+    }
+    @include theme-style('theme-dark') {
+      background-color: $dark-bg-primary;
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    transition: transform 0.3s;
+  }
+
+  &_active {
+    transform: translateY(0);
+  }
 }
 
 .nav-list {
@@ -10,6 +32,9 @@
   display: flex;
   list-style: none;
   align-items: center;
+  @include responsive(xs) {
+    flex-direction: column;
+  }
 
   &__link {
     display: inline-block;

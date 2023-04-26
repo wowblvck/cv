@@ -9,6 +9,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include responsive(xs) {
+      padding-bottom: 70px;
+    }
   }
 
   &__title {
@@ -34,7 +37,7 @@
       'skills-frontend skills-backend'
       'skills-common skills-common';
     @include responsive(xs, sm) {
-      margin-top: 70px;
+      margin-top: 80px;
       gap: 29px;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;

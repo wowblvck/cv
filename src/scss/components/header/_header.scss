@@ -9,6 +9,10 @@
   display: flex;
   align-items: center;
   z-index: 1;
+  @include responsive(xs) {
+    border: none !important;
+    height: 80px;
+  }
   @include theme-style('theme-light') {
     border-bottom: 1px solid $light-hr-color;
     background-color: $light-bg-primary;
@@ -33,6 +37,10 @@
 
     h1 {
       font-size: inherit;
+    }
+
+    @include responsive(xs, sm) {
+      display: none;
     }
   }
 }

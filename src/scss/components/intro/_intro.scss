@@ -14,6 +14,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include responsive(xs) {
+      padding-top: 104px;
+      padding-bottom: 103px;
+    }
   }
 
   &__title {

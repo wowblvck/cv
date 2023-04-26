@@ -1,5 +1,22 @@
 @use '../mixins' as *;
 
 .container {
-  @include container-max-widths(lg);
+  @include responsive(xxl) {
+    @include container-max-widths(xxl);
+  }
+  @include responsive(xl) {
+    @include container-max-widths(xl);
+  }
+  @include responsive(lg) {
+    @include container-max-widths(lg);
+  }
+  @include responsive(md) {
+    @include container-max-widths(md);
+  }
+  @include responsive(sm) {
+    @include container-max-widths(sm);
+  }
+  @include responsive(xs) {
+    @include container-max-widths(xs);
+  }
 }

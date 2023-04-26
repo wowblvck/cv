@@ -1,5 +1,5 @@
-@use '../../mixins' as *;
-@use '../../variables' as *;
+@use '@styles/mixins' as *;
+@use '@styles/variables' as *;
 
 .intro {
   @include theme-style('theme-light') {
@@ -9,7 +9,8 @@
     background-color: $dark-bg-second;
   }
   &__container {
-    padding: 153px 0 144px;
+    padding-top: 153px;
+    padding-bottom: 144px;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,0 +1,13 @@
+@use '@styles/mixins' as *;
+@use '@styles/variables' as *;
+
+.hr-main {
+  width: 100%;
+  border: none;
+  @include theme-style('theme-light') {
+    border-bottom: 1px solid $light-hr-color;
+  }
+  @include theme-style('theme-dark') {
+    border-bottom: 1px solid $dark-hr-color;
+  }
+}

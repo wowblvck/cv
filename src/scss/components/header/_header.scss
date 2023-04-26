@@ -1,16 +1,28 @@
 @use '@styles/variables' as *;
+@use '@styles/mixins' as *;
 
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
   height: 115px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e5ebf2;
+  z-index: 1;
+  @include theme-style('theme-light') {
+    border-bottom: 1px solid $light-hr-color;
+    background-color: $light-bg-primary;
+  }
+  @include theme-style('theme-dark') {
+    border-bottom: 1px solid $dark-hr-color;
+    background-color: $dark-bg-primary;
+  }
 
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 948px;
+    max-width: 950px;
   }
 
   &__link {

@@ -11,6 +11,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   transition: all 0.8s;
+}
+
+#about,
+#skills {
+  scroll-margin-top: 115px;
 }

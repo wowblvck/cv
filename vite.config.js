@@ -1,8 +1,11 @@
 import autoprefixer from 'autoprefixer';
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import { obfuscator } from 'rollup-obfuscator';
 
 export default defineConfig({
+  plugins: [obfuscator()],
+  base: './',
   css: {
     postcss: {
       plugins: [autoprefixer],

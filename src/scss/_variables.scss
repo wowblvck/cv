@@ -4,7 +4,6 @@
 $t1: font(17px);
 $h1: font(26px, 800);
 $h2: font(26px, 800);
-$hr-color: #dcdcde;
 $link-active: #8428f8;
 
 //Light theme
@@ -13,6 +12,8 @@ $light-bg-second: #f9fbfd;
 $light-fc-primary: #141c3a;
 $light-fc-second: #535e88;
 $light-icon-color: #141c3a;
+$light-hr-color: #dcdcde;
+$light-pb-color: #dfe5eb;
 
 //Dark theme
 $dark-bg-primary: #141c3a;
@@ -20,3 +21,5 @@ $dark-bg-second: #1d274f;
 $dark-fc-primary: #f9fbfd;
 $dark-fc-second: #f9fbfd;
 $dark-icon-color: #f9fbfd;
+$dark-hr-color: #535e88;
+$dark-pb-color: #535e88;

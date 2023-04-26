@@ -19,7 +19,7 @@
     padding: 15px 19px;
     transition: transform 0.3s;
 
-    &:focus {
+    &:hover {
       color: $link-active;
       text-shadow: 0.4px 0px 0 $link-active, -0.4px 0px 0 $link-active,
         0px 0.4px 0 $link-active, 0px -0.4px 0 $link-active;

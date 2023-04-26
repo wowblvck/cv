@@ -2,12 +2,66 @@
 
 @mixin container-max-widths($breakpoint) {
   max-width: map-get($container-max-widths, $breakpoint);
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @mixin theme-style($name) {
   .#{$name} & {
     @content;
+  }
+}
+
+@mixin responsive($media...) {
+  @each $value in $media {
+    @if map-has-key($breakpoints, $value) {
+      @if $value == xxl {
+        @media only screen and (min-width: map-get($breakpoints, $value)) {
+          @content;
+        }
+      } @else if $value == xl {
+        @media only screen and (min-width: map-get($breakpoints, xl)) and (max-width: (map-get($breakpoints, xxl) - 1px)) {
+          @content;
+        }
+      } @else if $value == lg {
+        @media only screen and (min-width: map-get($breakpoints, lg)) and (max-width: (map-get($breakpoints, xl) - 1px)) {
+          @content;
+        }
+      } @else if $value == md {
+        @media only screen and (min-width: map-get($breakpoints, md)) and (max-width: (map-get($breakpoints, lg) - 1px)) {
+          @content;
+        }
+      } @else if $value == sm {
+        @media only screen and (min-width: map-get($breakpoints, sm)) and (max-width: (map-get($breakpoints, md) - 1px)) {
+          @content;
+        }
+      } @else if $value == xs {
+        @media only screen and (min-width: map-get($breakpoints, xs)) and (max-width: (map-get($breakpoints, sm) - 1px)) {
+          @content;
+        }
+      }
+    }
+
+    // }
+    // } @else if $value == desktop-s {
+    //   @media only screen and (min-width: ($desktop-s)) and (max-width: ($desktop-m - 1px)) {
+    //     @content;
+    //   }
+    // } @else if $value == tablet-m {
+    //   @media only screen and (min-width: ($tablet-m)) and (max-width: ($desktop-s - 1px)) {
+    //     @content;
+    //   }
+    // } @else if $value == tablet-s {
+    //   @media only screen and (min-width: ($tablet-s)) and (max-width: ($tablet-m - 1px)) {
+    //     @content;
+    //   }
+    // } @else if $value == $breakpoints(xs) {
+    //   @media only screen and (min-width: ($breakpoints(xs))) and (max-width: ($tablet-s - 1px)) {
+    //     @content;
+    //   }
+    // }
   }
 }

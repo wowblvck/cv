@@ -1,0 +1,116 @@
+@use '@styles/functions' as *;
+@use '@styles/variables' as *;
+@use '@styles/mixins' as *;
+
+.skills {
+  &__container {
+    padding-top: 46px;
+    padding-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font: $h2;
+  }
+
+  &__hr {
+    margin-top: 43px;
+  }
+
+  &__wrapper {
+    margin-top: 143px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    justify-items: center;
+    gap: 50px;
+    grid-template-areas:
+      'skills-frontend skills-backend'
+      'skills-common skills-common';
+    @include responsive(xs, sm) {
+      margin-top: 70px;
+      gap: 29px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        'skills-frontend'
+        'skills-backend'
+        'skills-common';
+    }
+  }
+}
+
+.skills-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  width: 100%;
+  max-width: 531px;
+
+  &:nth-child(1) {
+    grid-area: skills-frontend;
+    justify-self: self-end;
+  }
+
+  &:nth-child(2) {
+    grid-area: skills-backend;
+    justify-self: self-start;
+  }
+
+  &:nth-child(3) {
+    grid-area: skills-common;
+  }
+
+  &__title {
+    margin: 0;
+    font: $t1;
+    line-height: 30px;
+    text-transform: uppercase;
+    @include theme-style('theme-light') {
+      color: $light-fc-second;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.progress-bar {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  &__container {
+    width: 100%;
+    height: 6px;
+    border-radius: 6px;
+    overflow: hidden;
+    @include theme-style('theme-light') {
+      background-color: $light-pb-color;
+    }
+    @include theme-style('theme-dark') {
+      background-color: $dark-pb-color;
+    }
+  }
+  &__content {
+    display: block;
+    height: 100%;
+    background-color: $link-active;
+    border-radius: 6px;
+  }
+
+  &__info {
+    margin: 0;
+    font: $t1;
+  }
+}

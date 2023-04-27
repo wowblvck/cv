@@ -2,9 +2,7 @@
 @use '@styles/mixins' as *;
 
 .nav {
-  margin-left: auto;
   @include responsive(xs) {
-    margin: 0;
     @include theme-style('theme-light') {
       background-color: $light-bg-primary;
     }
@@ -44,8 +42,11 @@
     color: inherit;
     font: $t1;
     text-decoration: none;
-    padding: 15px 19px;
+    padding: 15px 16px;
     transition: transform 0.3s;
+    @include responsive(xs) {
+      text-transform: uppercase;
+    }
 
     &:hover {
       color: $link-active;

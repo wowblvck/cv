@@ -20,14 +20,23 @@
     text-align: center;
     font: font(48px, 800);
     line-height: 59px;
+    @include responsive(xs) {
+      font: font(40px, 800);
+    }
   }
 
   &__description {
-    margin: 5px 0 0;
+    margin: 10px 0 0;
     text-align: center;
     font: $t1;
+    line-height: 25px;
     @include theme-style('theme-light') {
       color: $light-fc-second;
+    }
+
+    @include responsive(xs) {
+      margin: 15px 0 0;
+      line-height: 25px;
     }
   }
 

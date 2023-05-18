@@ -22,10 +22,21 @@ html {
 
 body {
   transition: all 0.8s;
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: hsla(0, 0%, 43%, 0.533);
+    border-radius: 100px;
+  }
 }
 
 #about,
-#skills {
+#skills,
+#education {
   scroll-margin-top: 115px;
   @include responsive(xs) {
     scroll-margin-top: 80px;

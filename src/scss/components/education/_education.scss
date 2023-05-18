@@ -1,0 +1,147 @@
+@use '@styles/functions' as *;
+@use '@styles/mixins' as *;
+@use '@styles/variables' as *;
+
+.education {
+  @include theme-style('theme-light') {
+    background-color: $light-bg-second;
+  }
+  @include theme-style('theme-dark') {
+    background-color: $dark-bg-second;
+  }
+
+  &__container {
+    padding-top: 46px;
+    padding-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include responsive(xs) {
+      padding-bottom: 70px;
+    }
+  }
+
+  &__hr {
+    margin-top: 43px;
+  }
+}
+
+.education-list {
+  padding: 0;
+  margin: 120px 0 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 31px;
+
+  @include responsive(xs, sm) {
+    flex-direction: column;
+    margin-top: 70px;
+    gap: 0px;
+  }
+
+  &__item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      'time'
+      'specialty'
+      'timeline'
+      'university'
+      'description';
+
+    @include responsive(xs, sm) {
+      max-width: 100%;
+      column-gap: 18px;
+      grid-template-columns: auto 1fr 2fr;
+      grid-template-areas:
+        'timeline time university'
+        'timeline time specialty'
+        'timeline time description';
+    }
+
+    &:last-child {
+      @include responsive(xs, sm) {
+        .timeline__hr {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__time {
+    grid-area: time;
+    margin: 0;
+    font: font(20px, 300);
+    line-height: 30px;
+  }
+
+  &__specialty {
+    grid-area: specialty;
+    margin: 13px 0 0;
+    font: font(17px, 300);
+    line-height: 30px;
+
+    @include responsive(xs, sm) {
+      margin: 0;
+    }
+
+    @include responsive(xs) {
+      word-break: break-word;
+    }
+
+    @include theme-style('theme-light') {
+      color: $light-fc-second;
+    }
+    @include theme-style('theme-dark') {
+      color: $dark-fc-second;
+    }
+  }
+
+  &__timeline {
+    grid-area: timeline;
+    margin: 31px 0;
+
+    @include responsive(xs, sm) {
+      margin: 9.5px 0 0;
+    }
+  }
+
+  &__university {
+    grid-area: university;
+    margin: 0;
+    font: font(20px, 300);
+    line-height: 30px;
+    text-transform: uppercase;
+
+    @include responsive(xs, sm) {
+      font: font(17px, 300);
+      line-height: 27px;
+    }
+
+    @include responsive(xs) {
+      word-break: break-word;
+    }
+  }
+
+  &__description {
+    grid-area: description;
+    margin: 13px 0 0;
+    padding-bottom: 15px;
+    font: font(17px, 300);
+    line-height: 30px;
+
+    @include theme-style('theme-light') {
+      color: $light-fc-second;
+    }
+    @include theme-style('theme-dark') {
+      color: $dark-fc-second;
+    }
+
+    @include responsive(xs) {
+      word-break: break-word;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins' as *;
+
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 31px;
+
+  @include responsive(xs, sm) {
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  &__dot {
+    flex-shrink: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background-color: $link-active;
+  }
+
+  &__hr {
+    margin: 0;
+    width: 100%;
+    border: none;
+    @include theme-style('theme-light') {
+      border-bottom: 1px solid $light-hr-color;
+    }
+    @include theme-style('theme-dark') {
+      border-bottom: 1px solid $dark-hr-color;
+    }
+
+    @include responsive(xs, sm) {
+      flex: 1;
+      width: auto;
+      border: none;
+      @include theme-style('theme-light') {
+        border-left: 1px solid $light-hr-color;
+      }
+      @include theme-style('theme-dark') {
+        border-left: 1px solid $dark-hr-color;
+      }
+    }
+  }
+}

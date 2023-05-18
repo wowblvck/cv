@@ -5,3 +5,4 @@ import './scss/style.scss';
 import './js/theme';
 import './js/menu';
 import './js/language';
+import './js/utils';

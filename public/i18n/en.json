@@ -4,9 +4,8 @@
   },
   "links": {
     "about": "About me",
-    "experience": "Experience",
     "skills": "Skills",
-    "projects": "Projects",
+    "education": "Education",
     "cv": "CV"
   },
   "about": {
@@ -20,5 +19,18 @@
     "title": "Hi, <span>I’m Indar</span>. Nice to meet you.",
     "description": "I create interfaces for web applications and websites using various technologies such as HTML, CSS, JavaScript, React and many others. I believe that well-written code should be understandable, modular, scalable, and easy to maintain. I love working in a team and am always ready to share my knowledge and experience with colleagues. If you are looking for an experienced and responsible front-end developer who is ready to take on any tasks related to creating interfaces for web applications and websites, then I am ready to help you implement your ideas and achieve the desired results."
   },
-  "skills": "Skills"
+  "skills": "Skills",
+  "education": {
+    "title": "Education",
+    "university": {
+      "specialty": "Design and technological support of machine-building industries",
+      "title": "Kuban State Technological University",
+      "description": "Bachelor's degree in mechanical engineering. Design and development of equipment for heavy engineering and machine tool building."
+    },
+    "course": {
+      "specialty": "Frontend Developer",
+      "title": "The Rolling Scopes School",
+      "description": "Graduated from the preparatory and basic Frontend development program. Currently learning to build applications in React."
+    }
+  }
 }

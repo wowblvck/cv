@@ -144,4 +144,35 @@
       word-break: break-word;
     }
   }
+
+  &__link {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    filter: opacity(0.9);
+
+    @include theme-style('theme-light') {
+      border-bottom: 1px $light-burger-line dotted;
+    }
+    @include theme-style('theme-dark') {
+      border-bottom: 1px $dark-burger-line dotted;
+    }
+
+    &::after {
+      content: '';
+    }
+
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
+
+    &:link {
+      text-decoration: none;
+    }
+  }
 }

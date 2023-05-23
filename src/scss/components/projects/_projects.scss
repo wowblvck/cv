@@ -1,0 +1,142 @@
+@use '@styles/functions' as *;
+@use '@styles/variables' as *;
+@use '@styles/mixins' as *;
+
+.projects {
+  &__container {
+    padding-top: 46px;
+    padding-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include responsive(xs) {
+      padding-bottom: 70px;
+    }
+  }
+
+  &__hr {
+    margin-top: 43px;
+  }
+}
+
+.projects-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 45px;
+  padding: 0;
+  margin: 95px 0 0;
+  max-width: 1158px;
+
+  &__item {
+    position: relative;
+    max-width: 356px;
+    height: 241px;
+    @include responsive(xs) {
+      height: 190px;
+    }
+    border-radius: 11px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+      .projects-list__wrapper {
+        transition: all 0.3s;
+        top: 0;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__wrapper {
+    position: absolute;
+    background-color: $link-active;
+    width: 100%;
+    height: 100%;
+    opacity: 0.95;
+    left: 0;
+    top: 101%;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 22px;
+    overflow: hidden;
+
+    @include responsive(xs) {
+      padding: 14px;
+    }
+
+    @include theme-style('theme-light') {
+      color: #fff;
+    }
+    @include theme-style('theme-dark') {
+      color: #fff;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font: font(26px, 800);
+    @include responsive(xs) {
+      font: font(22px, 800);
+    }
+  }
+
+  &__description {
+    margin: 7px 0 0;
+    font: font(17px, 300);
+    line-height: 30px;
+    @include responsive(xs) {
+      font: font(16px, 300);
+      line-height: 24px;
+    }
+  }
+}
+
+.links-list {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  margin-top: 10px;
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+    font: font(19px, 800);
+
+    @include responsive(xs) {
+      font: font(16px, 800);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background-color: #fff;
+      bottom: -3px;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+  }
+}

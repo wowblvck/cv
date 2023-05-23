@@ -16,7 +16,7 @@
   cursor: pointer;
   z-index: 10;
 
-  @include responsive(xs) {
+  @include responsive(xs, sm) {
     display: flex;
   }
 

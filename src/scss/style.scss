@@ -36,9 +36,11 @@ body {
 
 #about,
 #skills,
-#education {
+#education,
+#projects,
+#cv {
   scroll-margin-top: 115px;
-  @include responsive(xs) {
+  @include responsive(xs, sm) {
     scroll-margin-top: 80px;
   }
 }

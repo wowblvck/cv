@@ -2,13 +2,17 @@
 @use '@styles/mixins' as *;
 
 .nav {
-  @include responsive(xs) {
-    @include theme-style('theme-light') {
-      background-color: $light-bg-primary;
-    }
-    @include theme-style('theme-dark') {
-      background-color: $dark-bg-primary;
-    }
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+  @include theme-style('theme-light') {
+    background-color: $light-bg-primary;
+  }
+  @include theme-style('theme-dark') {
+    background-color: $dark-bg-primary;
+  }
+  @include responsive(xs, sm) {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,9 +21,6 @@
     padding-top: 50px;
     padding-bottom: 20px;
     transition: transform 0.3s;
-  }
-  @include responsive(sm) {
-    margin: 0;
   }
 
   &_active {
@@ -33,7 +34,7 @@
   display: flex;
   list-style: none;
   align-items: center;
-  @include responsive(xs) {
+  @include responsive(xs, sm) {
     flex-direction: column;
   }
 
@@ -44,7 +45,7 @@
     text-decoration: none;
     padding: 15px 16px;
     transition: transform 0.3s;
-    @include responsive(xs) {
+    @include responsive(xs, sm) {
       text-transform: uppercase;
     }
 

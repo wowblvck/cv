@@ -159,10 +159,6 @@
       border-bottom: 1px $dark-burger-line dotted;
     }
 
-    &::after {
-      content: '';
-    }
-
     &:visited {
       text-decoration: none;
     }

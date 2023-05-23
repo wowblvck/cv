@@ -6,6 +6,7 @@
     "about": "About me",
     "skills": "Skills",
     "education": "Education",
+    "projects": "Projects",
     "cv": "CV"
   },
   "about": {
@@ -31,6 +32,20 @@
       "specialty": "Frontend Developer",
       "title": "The Rolling Scopes School",
       "description": "Graduated from the <a href='https://app.rs.school/certificate/vjlmbgbk' class='education-list__link' target='_blank'>preparatory</a> and <a href='https://app.rs.school/certificate/ozcqgho0' class='education-list__link' target='_blank'>basic</a> Frontend development program. Currently learning to build applications in React."
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "list": {
+      "beautiful_places": {
+        "description": "Find out about the beautiful places on our planet."
+      },
+      "songbird": {
+        "description": "You need to guess the bird by its song."
+      },
+      "online_store": {
+        "description": "Team project for an electronics store."
+      }
     }
   }
 }

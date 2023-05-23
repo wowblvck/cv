@@ -31,7 +31,21 @@
     "course": {
       "specialty": "Фронтенд разработчик",
       "title": "The Rolling Scopes School",
-      "description": "Окончил <a href='https://app.rs.school/certificate/vjlmbgbk' target='_blank'>подготовительную</a> и <a href='https://app.rs.school/certificate/ozcqgho0' class='education-list__link' target='_blank'>основную</a> программы Frontend разработки. В настоящее время учусь построению приложений на React."
+      "description": "Окончил <a href='https://app.rs.school/certificate/vjlmbgbk' target='_blank' class='education-list__link'>подготовительную</a> и <a href='https://app.rs.school/certificate/ozcqgho0' class='education-list__link' target='_blank'>основную</a> программы Frontend разработки. В настоящее время учусь построению приложений на React."
+    }
+  },
+  "projects": {
+    "title": "Проекты",
+    "list": {
+      "beautiful_places": {
+        "description": "Узнай о прекрасных местах нашей планеты."
+      },
+      "songbird": {
+        "description": "Вам нужно угадать птицу по ее пению."
+      },
+      "online_store": {
+        "description": "Командный проект магазина электроники."
+      }
     }
   }
 }

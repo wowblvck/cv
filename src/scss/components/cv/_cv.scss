@@ -1,0 +1,82 @@
+@use '@styles/functions' as *;
+@use '@styles/mixins' as *;
+@use '@styles/variables' as *;
+
+.cv {
+  height: 452px;
+  display: flex;
+
+  @include theme-style('theme-light') {
+    background-color: $light-bg-second;
+  }
+  @include theme-style('theme-dark') {
+    background-color: $dark-bg-second;
+  }
+
+  @include responsive(xs, sm) {
+    flex-direction: column;
+  }
+
+  &__link {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition-duration: 0.4s;
+
+    font: font(26px, 800);
+    color: $link-active;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+    @include responsive(xs, sm) {
+      height: 100%;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      z-index: -1;
+      @include theme-style('theme-light') {
+        background: $light-bg-second;
+      }
+      @include theme-style('theme-dark') {
+        background: $dark-bg-second;
+      }
+      transition: all 0.2s;
+    }
+
+    &:active::after {
+      // transition: 0s;
+      width: 100%;
+    }
+  }
+
+  &__hr {
+    height: auto;
+    margin: 0;
+    border: none;
+    @include theme-style('theme-light') {
+      border-left: 1px solid $light-hr-color;
+    }
+    @include theme-style('theme-dark') {
+      border-left: 1px solid $dark-hr-color;
+    }
+    @include responsive(xs, sm) {
+      margin: 0;
+      @include theme-style('theme-light') {
+        border-bottom: 1px solid $light-hr-color;
+      }
+      @include theme-style('theme-dark') {
+        border-bottom: 1px solid $dark-hr-color;
+      }
+    }
+  }
+}

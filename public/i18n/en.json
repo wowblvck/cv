@@ -45,6 +45,9 @@
       },
       "online_store": {
         "description": "Team project for an electronics store."
+      },
+      "graphiql-app": {
+        "description": "Sandbox team project for GraphQL API queries."
       }
     }
   }

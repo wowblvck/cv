@@ -45,6 +45,9 @@
       },
       "online_store": {
         "description": "Командный проект магазина электроники."
+      },
+      "graphiql-app": {
+        "description": "Командный проект песочницы для запросов API GraphQL."
       }
     }
   }

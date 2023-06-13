@@ -31,7 +31,12 @@
     "course": {
       "specialty": "Фронтенд разработчик",
       "title": "The Rolling Scopes School",
-      "description": "Окончил <a href='https://app.rs.school/certificate/vjlmbgbk' target='_blank' class='education-list__link'>подготовительную</a> и <a href='https://app.rs.school/certificate/ozcqgho0' class='education-list__link' target='_blank'>основную</a> программы Frontend разработки. В настоящее время учусь построению приложений на React."
+      "description": "Окончил <a href='https://app.rs.school/certificate/vjlmbgbk' target='_blank' class='education-list__link'>подготовительную</a> и <a href='https://app.rs.school/certificate/ozcqgho0' class='education-list__link' target='_blank'>основную</a> программы Frontend разработки."
+    },
+    "react": {
+      "specialty": "React",
+      "title": "The Rolling Scopes School",
+      "description": "<a href='https://app.rs.school/certificate/oy8ndb1q' target='_blank' class='education-list__link'>Окончил</a> курс по разработке интерфейсов с использованием инструмента React."
     }
   },
   "projects": {
@@ -48,6 +53,9 @@
       },
       "graphiql-app": {
         "description": "Командный проект песочницы для запросов API GraphQL."
+      },
+      "school-book": {
+        "description": "Электронный дневник для образовательных учреждений."
       }
     }
   }

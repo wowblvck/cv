@@ -2,9 +2,11 @@ import autoprefixer from 'autoprefixer';
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import { obfuscator } from 'rollup-obfuscator';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import DEFAULT_OPTIONS from './image-optimizer.config';
 
 export default defineConfig({
-  plugins: [obfuscator()],
+  plugins: [obfuscator(), ViteImageOptimizer(DEFAULT_OPTIONS)],
   base: './',
   css: {
     postcss: {

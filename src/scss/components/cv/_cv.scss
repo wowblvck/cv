@@ -18,7 +18,9 @@
   }
 
   &__link {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 20px;
     border: none;
@@ -31,32 +33,28 @@
     color: $link-active;
     text-transform: uppercase;
     text-decoration: underline;
+    text-align: center;
 
     @include responsive(xs, sm) {
       height: 100%;
     }
 
-    &::after {
-      position: absolute;
-      content: '';
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      z-index: -1;
-      @include theme-style('theme-light') {
-        background: $light-bg-second;
-      }
-      @include theme-style('theme-dark') {
-        background: $dark-bg-second;
-      }
-      transition: all 0.2s;
-    }
-
-    &:active::after {
-      // transition: 0s;
-      width: 100%;
-    }
+    // &::after {
+    //   position: absolute;
+    //   content: '';
+    //   top: 0;
+    //   left: 0;
+    //   width: 0;
+    //   height: 100%;
+    //   z-index: -1;
+    //   @include theme-style('theme-light') {
+    //     background: $light-bg-second;
+    //   }
+    //   @include theme-style('theme-dark') {
+    //     background: $dark-bg-second;
+    //   }
+    //   transition: all 0.2s;
+    // }
   }
 
   &__hr {

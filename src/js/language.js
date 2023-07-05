@@ -19,8 +19,8 @@ const initLocalization = async () => {
     SUPPORTED_LANGS.map(lang =>
       fetch(`./i18n/${lang}.json`)
         .then(r => r.json())
-        .then(json => ({ lang, resources: { translation: json } }))
-    )
+        .then(json => ({ lang, resources: { translation: json } })),
+    ),
   );
   const currentLang = localStorage.getItem('lang') || DEFAULT_LANG;
   const fallbackLang = DEFAULT_LANG;

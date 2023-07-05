@@ -5,7 +5,7 @@ const getMaxHeight = elements => {
     ...Array.from(elements).map(e => {
       e.style.height = 'auto';
       return e.offsetHeight;
-    })
+    }),
   );
 };
 

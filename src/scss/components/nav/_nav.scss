@@ -51,8 +51,11 @@
 
     &:hover {
       color: $link-active;
-      text-shadow: 0.4px 0px 0 $link-active, -0.4px 0px 0 $link-active,
-        0px 0.4px 0 $link-active, 0px -0.4px 0 $link-active;
+      text-shadow:
+        0.4px 0px 0 $link-active,
+        -0.4px 0px 0 $link-active,
+        0px 0.4px 0 $link-active,
+        0px -0.4px 0 $link-active;
       transform: scale(1.125);
       transition: transform 0.3s;
     }

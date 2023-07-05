@@ -20,4 +20,16 @@ export default defineConfig({
       '@styles': resolve(__dirname, './src/scss'),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('i18next')) {
+            return 'i18n';
+          }
+          return null;
+        },
+      },
+    },
+  },
 });

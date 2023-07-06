@@ -44,24 +44,5 @@
         }
       }
     }
-
-    // }
-    // } @else if $value == desktop-s {
-    //   @media only screen and (min-width: ($desktop-s)) and (max-width: ($desktop-m - 1px)) {
-    //     @content;
-    //   }
-    // } @else if $value == tablet-m {
-    //   @media only screen and (min-width: ($tablet-m)) and (max-width: ($desktop-s - 1px)) {
-    //     @content;
-    //   }
-    // } @else if $value == tablet-s {
-    //   @media only screen and (min-width: ($tablet-s)) and (max-width: ($tablet-m - 1px)) {
-    //     @content;
-    //   }
-    // } @else if $value == $breakpoints(xs) {
-    //   @media only screen and (min-width: ($breakpoints(xs))) and (max-width: ($tablet-s - 1px)) {
-    //     @content;
-    //   }
-    // }
   }
 }

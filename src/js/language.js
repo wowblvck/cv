@@ -80,7 +80,7 @@ const initLanguageSwitcher = () => {
 
 (async () => {
   hideNonDefaultIcons();
-  await initLocalization();
   setWrappersHeight();
   initLanguageSwitcher();
+  await initLocalization();
 })();

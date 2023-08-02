@@ -51,6 +51,4 @@ const setWrappersHeight = () => {
   }
 };
 
-window.addEventListener('resize', setWrappersHeight);
-
 export { setWrappersHeight };

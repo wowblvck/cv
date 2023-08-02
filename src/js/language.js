@@ -1,5 +1,4 @@
 import i18next from 'i18next';
-import { setWrappersHeight } from './utils';
 
 const DEFAULT_LANG = 'en';
 
@@ -80,7 +79,6 @@ const initLanguageSwitcher = () => {
 
 (async () => {
   hideNonDefaultIcons();
-  setWrappersHeight();
   initLanguageSwitcher();
   await initLocalization();
 })();

@@ -1,8 +1,9 @@
 name: Production
 
 on:
-  push:
-    branches: ['dev']
+  pull_request:
+    types: ['opened', 'edited', 'synchronize', 'closed']
+    branches: ['main']
 
 jobs:
   build_and_copy:

@@ -6,8 +6,10 @@ on:
     branches: ['main']
 
 jobs:
-  build_and_copy:
+  build:
+    name: Build Project
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
       - uses: actions/checkout@v3
@@ -19,22 +21,23 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Copy build artifacts to a folder
-        run: mkdir build-output && cp -r dist build-output/
+
+  copy:
+    name: Archive and Copy
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    needs: build
+    runs-on: self-hosted
+    environment: production
+
+    steps:
+      - uses: actions/checkout@v3
       - name: Archive build artifacts
-        run: tar -czf build.tar.gz build-output
+        run: tar -czf build.tar.gz dist
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: build-artifacts
           path: build.tar.gz
-
-  copy_to_runner:
-    needs: build_and_copy
-    runs-on: self-hosted
-    environment: production
-
-    steps:
       - name: Download build artifacts
         uses: actions/download-artifact@v3
         with:
@@ -43,4 +46,4 @@ jobs:
       - name: Extract build artifacts
         run: tar -xzf build.tar.gz
       - name: Copy folder to where nginx expects it to be
-        run: cp -r build-output ${{secrets.COPY_TO_FOLDER}}
+        run: cp -r dist ${{secrets.COPY_TO_FOLDER}}

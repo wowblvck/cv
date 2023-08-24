@@ -59,6 +59,9 @@
       },
       "water-status": {
         "description": "A simple Telegram bot for control (manual) of the state of the water heater in the house."
+      },
+      "armageddon": {
+        "description": "Learn about approaching asteroids and order their destruction"
       }
     }
   }

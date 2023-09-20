@@ -51,4 +51,4 @@ const setWrappersHeight = () => {
   }
 };
 
-export { setWrappersHeight };
+export default setWrappersHeight;

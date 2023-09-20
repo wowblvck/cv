@@ -1,7 +1,5 @@
-import { setWrappersHeight } from './utils';
+import setWrappersHeight from './utils';
 
 window.addEventListener('resize', setWrappersHeight);
 
-(() => {
-  setWrappersHeight();
-})();
+window.addEventListener('DOMContentLoaded', setWrappersHeight);

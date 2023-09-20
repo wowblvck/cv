@@ -62,6 +62,9 @@
       },
       "armageddon": {
         "description": "Learn about approaching asteroids and order their destruction"
+      },
+      "google-books": {
+        "description": "Online book search service using Google Books API."
       }
     }
   }

@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
     @include responsive(xs, sm) {
       padding-top: 0px;
       padding-bottom: 90px;

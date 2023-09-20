@@ -1,4 +1,5 @@
 import i18next from 'i18next';
+import autoHeight from './auto-height';
 
 const DEFAULT_LANG = 'en';
 
@@ -11,6 +12,7 @@ const updateContent = () => {
     const translation = i18next.t(key);
     element.innerHTML = translation;
   });
+  autoHeight.set();
 };
 
 const initLocalization = async () => {
@@ -48,7 +50,6 @@ const switchLanguage = () => {
   localStorage.setItem('lang', nextLang);
   setLanguageIcon(nextLang);
   i18next.changeLanguage(nextLang);
-  setWrappersHeight();
 };
 
 const hideNonDefaultIcons = () => {

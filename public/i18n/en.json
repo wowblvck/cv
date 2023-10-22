@@ -20,7 +20,18 @@
     "title": "Hi, <span>I’m Indar</span>. Nice to meet you.",
     "description": "I create interfaces for web applications and websites using various technologies such as HTML, CSS, JavaScript, React and many others. I believe that well-written code should be understandable, modular, scalable, and easy to maintain. I love working in a team and am always ready to share my knowledge and experience with colleagues. If you are looking for an experienced and responsible front-end developer who is ready to take on any tasks related to creating interfaces for web applications and websites, then I am ready to help you implement your ideas and achieve the desired results."
   },
-  "skills": "Skills",
+  "skills": {
+    "title": "Skills",
+    "subtitle": {
+      "basic": "Basic",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "uikit": "UI Kit",
+      "deploy": "Deploy",
+      "tests": "Tests",
+      "tools": "Other Tools"
+    }
+  },
   "education": {
     "title": "Education",
     "university": {

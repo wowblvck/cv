@@ -28,7 +28,7 @@
 
 .education-list {
   padding: 0;
-  margin: 120px 0 0;
+  margin: 95px 0 0;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -37,8 +37,7 @@
 
   @include responsive(xs, sm) {
     flex-direction: column;
-    margin-top: 70px;
-    gap: 0px;
+    gap: 0;
   }
 
   &__item {

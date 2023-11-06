@@ -76,6 +76,9 @@
       },
       "google-books": {
         "description": "Online book search service using Google Books API."
+      },
+      "movies-hub": {
+        "description": "Search, evaluate and recommend a movie in a convenient format."
       }
     }
   }

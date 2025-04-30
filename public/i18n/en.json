@@ -1,7 +1,5 @@
 {
-  "profile": {
-    "name": "Indar Basto"
-  },
+  "profile": { "name": "Indar Basto" },
   "links": {
     "about": "About me",
     "skills": "Skills",
@@ -13,9 +11,7 @@
     "position": "Frontend Developer",
     "description": "My mission is to create web applications that are eye-catching and easy to use."
   },
-  "contacts": {
-    "phone": "Phone"
-  },
+  "contacts": { "phone": "Phone" },
   "intro": {
     "title": "Hi, <span>I’m Indar</span>. Nice to meet you.",
     "description": "I create interfaces for web applications and websites using various technologies such as HTML, CSS, JavaScript, React and many others. I believe that well-written code should be understandable, modular, scalable, and easy to maintain. I love working in a team and am always ready to share my knowledge and experience with colleagues. If you are looking for an experienced and responsible front-end developer who is ready to take on any tasks related to creating interfaces for web applications and websites, then I am ready to help you implement your ideas and achieve the desired results."
@@ -29,7 +25,8 @@
       "uikit": "UI Kit",
       "deploy": "Deploy",
       "tests": "Tests",
-      "tools": "Other Tools"
+      "tools": "Other Tools",
+      "technological": "Technological"
     }
   },
   "education": {
@@ -56,9 +53,7 @@
       "beautiful_places": {
         "description": "Find out about the beautiful places on our planet."
       },
-      "songbird": {
-        "description": "You need to guess the bird by its song."
-      },
+      "songbird": { "description": "You need to guess the bird by its song." },
       "online_store": {
         "description": "Team project for an electronics store."
       },
